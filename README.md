@@ -90,15 +90,17 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed CLI deployment instructions.
 ## Project Structure
 
 ```
-├── configs/           # Configuration files (DB, ImageKit)
-├── controllers/       # Route controllers
-├── middleware/        # Custom middleware (auth, multer)
+├── api/               # Vercel serverless functions
+│   └── index.js      # Main API entry point (Express app)
+├── configs/          # Configuration files (DB, ImageKit)
+├── controllers/      # Route controllers
+├── middleware/       # Custom middleware (auth, multer)
 ├── models/           # MongoDB schemas
 ├── routes/           # API routes
-├── server.js         # Entry point
+├── server.js         # Local development entry point
 ├── package.json      # Dependencies
 ├── .env.example      # Environment variables template
-└── vercel.json       # Vercel configuration
+└── vercel.json       # Vercel serverless function configuration
 ```
 
 ## License

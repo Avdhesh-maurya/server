@@ -61,7 +61,12 @@ Update your `CLIENT_URL` environment variable with your Render frontend URL so C
 - Check MongoDB whitelist includes Vercel IPs
 
 **If API routes return 404:**
-- The `vercel.json` is configured to route all requests through the `api/` directory
+- The `vercel.json` is configured to route all requests to `api/index.js`
+
+**If you get "No Output Directory" error:**
+- This is a Node.js serverless API, not a static site
+- The `vercel.json` explicitly defines `api/index.js` as a serverless function build
+- No static output directory is needed
 
 **For logs and monitoring:**
 ```bash
@@ -69,6 +74,6 @@ vercel logs
 ```
 
 ## Additional Notes
-- Vercel automatically detects Node.js apps from the `api/` directory
+- The project uses serverless functions, not static site generation
 - Your `package.json` specifies Node.js 20.x via the `engines` field, which takes precedence over Vercel Project Settings
-- `vercel.json` uses modern `rewrites` configuration for routing all requests to the serverless function
+- `vercel.json` uses `builds` configuration to explicitly define `api/index.js` as a serverless function
