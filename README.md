@@ -72,6 +72,12 @@ Server runs on `http://localhost:3000`
 
 See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed CLI deployment instructions.
 
+**Production Backend URL:** `https://rent-chi-eight.vercel.app`
+
+### Frontend Integration
+
+If you're building a frontend application to connect to this backend, see [FRONTEND_SETUP.md](./FRONTEND_SETUP.md) for detailed instructions on configuring your frontend to use the correct API base URL.
+
 ## Environment Variables
 
 | Variable | Description | Example |
