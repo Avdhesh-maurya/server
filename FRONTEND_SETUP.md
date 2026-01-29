@@ -15,21 +15,33 @@ To connect your frontend application to this backend, you need to configure the 
 Depending on your frontend framework and HTTP client, you'll need to update the API base URL in one of these locations:
 
 #### 1. **Environment Variables** (Recommended)
-Create or update your frontend's `.env` file:
+Create or update your frontend's `.env` file based on your framework:
 
+**For Vite-based projects** (Vite, Vue, etc.):
 ```env
 VITE_API_URL=https://rent-chi-eight.vercel.app
-# or
+```
+
+**For Create React App:**
+```env
 REACT_APP_API_URL=https://rent-chi-eight.vercel.app
-# or
+```
+
+**For Next.js:**
+```env
 NEXT_PUBLIC_API_URL=https://rent-chi-eight.vercel.app
 ```
 
 Then use it in your API client:
 ```javascript
+// For Vite
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
-// or
+
+// For Create React App
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+
+// For Next.js
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 ```
 
 #### 2. **Axios Configuration**
