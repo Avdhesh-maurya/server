@@ -27,6 +27,11 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
+// Root Route
+app.get('/', (req, res) => {
+  res.json({ success: true, message: 'Server is running' });
+});
+
 // API Routes
 app.use('/api/user', userRouter)
 app.use('/api/owner', ownerRouter)
