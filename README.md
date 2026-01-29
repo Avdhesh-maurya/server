@@ -70,6 +70,8 @@ Server runs on `http://localhost:3000`
 5. Set environment variables in Vercel settings
 6. Deploy
 
+**Note:** The project uses Node.js 20.x as specified in `package.json`. This setting takes precedence over any Node.js version configured in Vercel Project Settings.
+
 See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed CLI deployment instructions.
 
 ## Environment Variables
