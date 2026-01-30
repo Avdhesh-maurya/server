@@ -24,6 +24,11 @@ app.use('/api/user', userRouter);
 app.use('/api/owner', ownerRouter);
 app.use('/api/bookings', bookingRouter);
 
+app.get("/api", (req, res) => {
+  res.json({ success: true, message: "Backend running on Vercel" });
+});
+
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err);
